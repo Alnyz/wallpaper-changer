@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="tile"><polygon points="22,15 53,15 42,49 11,49"/></clipPath>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bf616a"/>
+      <stop offset="0.45" stop-color="#d9926f"/>
+      <stop offset="1" stop-color="#f0d9a8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe6b3" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffe6b3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect x="11" y="15" width="42" height="34" fill="url(#sky)"/>
+    <circle cx="32" cy="29" r="13" fill="url(#glow)"/>
+    <circle cx="32" cy="29" r="6" fill="#fff1d0"/>
+    <polygon points="11,49 25,37 40,49" fill="#6b4f4a"/>
+    <polygon points="28,49 43,34 53,49" fill="#2b2730"/>
+  </g>
+  <polygon points="22,15 53,15 42,49 11,49" fill="none" stroke="#465064" stroke-opacity="0.5" stroke-width="1.5" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,35 @@
+# Maintainer: alnyz <alnyz.co@gmail.com>
+pkgname=wallpaper-changer
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="KRunner-style wallpaper picker for KDE Plasma 6 (local + Wallhaven)"
+arch=('x86_64')
+url="https://github.com/alnyz/wallpaper-changer"
+license=('MIT')
+depends=(
+  'qt6-base'         # Qt6::Core/Gui/Network
+  'qt6-declarative'  # Qt6::Qml/Quick + QtQuick.{Controls,Layouts,Window,Effects}
+  'qt6-svg'          # SVG image plugin for qml/icons/*.svg loaded via Image{source}
+  'kconfig'          # KF6::ConfigCore (KSharedConfig/KConfigGroup)
+  'kdialog'          # native KDE folder picker shelled out to from blurbridge.cpp
+  'kcoreaddons'      # KF6::CoreAddons
+  'kdbusaddons'      # KF6::DBusAddons (KDBusService)
+  'ki18n'            # KF6::I18n
+  'kio'              # KF6::KIOGui
+  'kwindowsystem'    # KF6::WindowSystem (KWindowEffects in blurbridge.cpp)
+  'layer-shell-qt'   # LayerShellQt::Interface (main.cpp)
+  'plasma-workspace' # plasma-apply-wallpaperimage CLI (wallpapersetter)
+)
+makedepends=('cmake' 'extra-cmake-modules' 'ninja')
+source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
+sha256sums=('SKIP')
+
+build() {
+  cmake -B build -S "$pkgname-$pkgver" -G Ninja \
+    -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
+  cmake --build build
+}
+
+package() {
+  DESTDIR="$pkgdir" cmake --install build
+}

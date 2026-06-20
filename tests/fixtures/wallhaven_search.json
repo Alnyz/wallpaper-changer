@@ -1,0 +1,17 @@
+{
+  "data": [
+    { "id": "8grv2y", "url": "https://wallhaven.cc/w/8grv2y", "resolution": "3840x2160",
+      "ratio": "1.78", "file_type": "image/png",
+      "path": "https://w.wallhaven.cc/full/8g/wallhaven-8grv2y.png",
+      "thumbs": { "large": "https://th.wallhaven.cc/lg/8g/8grv2y.jpg",
+                  "original": "https://th.wallhaven.cc/orig/8g/8grv2y.jpg",
+                  "small": "https://th.wallhaven.cc/small/8g/8grv2y.jpg" } },
+    { "id": "abc123", "url": "https://wallhaven.cc/w/abc123", "resolution": "1920x1080",
+      "ratio": "1.78", "file_type": "image/jpeg",
+      "path": "https://w.wallhaven.cc/full/ab/wallhaven-abc123.jpg",
+      "thumbs": { "large": "https://th.wallhaven.cc/lg/ab/abc123.jpg",
+                  "original": "https://th.wallhaven.cc/orig/ab/abc123.jpg",
+                  "small": "https://th.wallhaven.cc/small/ab/abc123.jpg" } }
+  ],
+  "meta": { "current_page": 1, "last_page": 42, "per_page": 24, "total": 1001, "seed": null }
+}

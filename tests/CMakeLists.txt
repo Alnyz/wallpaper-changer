@@ -1,0 +1,18 @@
+function(wpc_add_test name)
+  qt_add_executable(${name} ${name}.cpp)
+  target_link_libraries(${name} PRIVATE wpc_core Qt6::Test)
+  add_test(NAME ${name} COMMAND ${name})
+endfunction()
+
+wpc_add_test(test_screeninfo)
+wpc_add_test(test_wallhavenquery)
+wpc_add_test(test_wallhavenparser)
+wpc_add_test(test_wallhavenclient)
+wpc_add_test(test_locallibrary)
+wpc_add_test(test_wallpapersetter)
+wpc_add_test(test_wallpapersetter_apply)
+wpc_add_test(test_downloader)
+wpc_add_test(test_settings)
+wpc_add_test(test_librarymodel)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/fixtures/wallhaven_search.json
+               ${CMAKE_CURRENT_BINARY_DIR}/fixtures/wallhaven_search.json COPYONLY)

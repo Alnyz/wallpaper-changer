@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Wallpaper Changer
+Comment=Set your wallpaper from a local folder or Wallhaven
+Exec=wallpaper-changer
+Icon=io.github.alnyz.WallpaperChanger
+Terminal=false
+Categories=Utility;Qt;KDE;
+DBusActivatable=true
+X-KDE-Shortcuts=Meta+O

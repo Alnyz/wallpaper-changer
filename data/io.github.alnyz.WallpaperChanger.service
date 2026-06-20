@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=io.github.alnyz.WallpaperChanger
+Exec=/usr/bin/wallpaper-changer

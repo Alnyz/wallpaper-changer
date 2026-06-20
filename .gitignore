@@ -1,0 +1,26 @@
+# Build output
+/build/
+build/
+*.o
+*.so
+*.a
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Qt / KDE
+*.user
+*.moc
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+/locals/
