@@ -47,8 +47,6 @@ int main(int argc, char **argv) {
         win->show();
         if (auto *ls = LayerShellQt::Window::get(win))
             ls->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
-        win->requestActivate();
-        win->raise();
     };
 
     QObject::connect(&service, &KDBusService::activateRequested, win,
